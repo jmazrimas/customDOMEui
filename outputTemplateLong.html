@@ -1,5 +1,5 @@
 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha256-k2WSCIexGzOj3Euiig+TlR8gA0EmPjuc79OEeY5L45g=" crossorigin="anonymous"></script>
-      <div class="project-run-services padding-10" ng-if="!runHistory" ng-show="hasCustomUI && service.interfaceModel.inParams.inputFile" layout="column">
+      <div class="project-run-services padding-10" ng-if="!runHistory" layout="column">
 
         <style>
 
@@ -10,8 +10,9 @@
         </style>
 
           <div id="custom-dome-UI">
-            <div layout="row" layout-wrap style="padding: 0px 15px">
-              
+            <div layout="row" layout-wrap style="padding: 0px 30px">
+              <h2>Report Created Successfully:</h2>
+              <p><a href="{{outputFile}}">{{outputFile}}</a>"
             </div>
           </div>
 
