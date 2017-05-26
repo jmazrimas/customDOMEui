@@ -3,10 +3,54 @@
 
 <style>
   #custom-dome-UI label, #custom-dome-UI input, #custom-dome-UI md-select{
-    margin: 0px 10px;
+    margin: 0 10px;
   }
   #custom-dome-UI {
     margin-top: -30px;
+  }
+
+  #custom-dome-UI select {
+    font-family: inherit;
+    background-color: transparent;
+    width: 100%;
+    padding: 4px 0;
+    color: rgb(54,​ 54,​ 54);
+    border: none;
+    border-bottom: 1px solid rgb(54,​ 54,​ 54);
+  }
+
+  /* Remove focus */
+  #custom-dome-UI select:focus {
+    outline: none}
+
+  /* Hide label */
+  #custom-dome-UI .mdl-selectfield label {display: none;}
+  /* Use custom arrow */
+  #custom-dome-UI .mdl-selectfield select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+  }
+
+  #custom-dome-UI .mdl-selectfield {
+    padding: 2px 10px;
+    font-family: 'Roboto','Helvetica','Arial',sans-serif;
+    position: relative;
+  }
+
+  #custom-dome-UI .mdl-selectfield::after {
+    position: absolute;
+    top: 0.75em;
+    right: 0.5em;
+    /* Styling the down arrow */
+    width: 0;
+    height: 0;
+    padding: 0;
+    content: '';
+    border-left: .25em solid transparent;
+    border-right: .25em solid transparent;
+    border-top: .375em solid rgb(76, 175, 80);
+    pointer-events: none;
   }
 
 </style>
@@ -51,12 +95,27 @@
                       <input id="inputFile" type="text">
                   </md-input-container>
 
-                  <div flex="50">
-                    <md-select placeholder="Select Material" ng-model="inputs.material" id="material">
-                      <md-option ng-value="Steel">Steel</md-option>
-                      <md-option ng-value="Aluminum">Aluminum</md-option>
+
+                  <md-input-container flex="50">
+                    <md-select placeholder="Select Material" ng-model="inputs.material">
+                      <md-option ng-value="'Steel'">Steel</md-option>
+                      <md-option ng-value="'Aluminum'">Aluminum </md-option>
                     </md-select>
-                  </div>
+                  </md-input-container>
+
+
+                  <md-input-container flex="50" class="mdl-selectfield">
+                    <label>Standard Select</label>
+                    <select class="browser-default" id="material">
+                      <option value="" disabled selected>Choose your option</option>
+                      <option value="1">Option 1</option>
+                      <option value="2">Option 2</option>
+                      <option value="3">Option 3</option>
+                    </select>
+                    <span class="md-select-icon" aria-hidden="true"></span>
+                  </md-input-container>
+
+
 
           </div>
       </div>
