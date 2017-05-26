@@ -14,9 +14,9 @@
     background-color: transparent;
     width: 100%;
     padding: 4px 0;
-    color: rgb(54,​ 54,​ 54);
+    color: rgba(0, 0, 0, 0.26);
     border: none;
-    border-bottom: 1px solid rgb(54,​ 54,​ 54);
+    border-bottom: 1px solid lightgrey;
   }
 
   /* Remove focus */
@@ -36,12 +36,13 @@
     padding: 2px 10px;
     font-family: 'Roboto','Helvetica','Arial',sans-serif;
     position: relative;
+    margin-top: 15px;
   }
 
   #custom-dome-UI .mdl-selectfield::after {
     position: absolute;
     top: 0.75em;
-    right: 0.5em;
+    right: 0.9em;
     /* Styling the down arrow */
     width: 0;
     height: 0;
@@ -96,23 +97,13 @@
                   </md-input-container>
 
 
-                  <md-input-container flex="50">
-                    <md-select placeholder="Select Material" ng-model="inputs.material">
-                      <md-option ng-value="'Steel'">Steel</md-option>
-                      <md-option ng-value="'Aluminum'">Aluminum </md-option>
-                    </md-select>
-                  </md-input-container>
-
-
                   <md-input-container flex="50" class="mdl-selectfield">
                     <label>Standard Select</label>
                     <select class="browser-default" id="material">
-                      <option value="" disabled selected>Choose your option</option>
-                      <option value="1">Option 1</option>
-                      <option value="2">Option 2</option>
-                      <option value="3">Option 3</option>
+                      <option value="" disabled selected>Choose Material</option>
+                      <option value="Steel">Steel</option>
+                      <option value="Aluminum">Aluminum</option>
                     </select>
-                    <span class="md-select-icon" aria-hidden="true"></span>
                   </md-input-container>
 
 
